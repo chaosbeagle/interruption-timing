@@ -1,0 +1,12 @@
+\begin{tikzpicture}[font=\small,>=Stealth,
+  stage/.style={draw=black!65,rounded corners=2pt,align=center,minimum height=1.4cm,text width=3.35cm,fill=black!3},
+  every path/.style={line width=.6pt}]
+\node[stage] (early) at (0,0) {Common early choice\\$E\supseteq U_B$\\spend $|E|$ units};
+\node[stage] (late) at (7.1,0) {Observed late targets\\$D\subseteq L_\theta\setminus E$\\spend $|D|$ units};
+\draw[dashed,black!45] (3.55,-1.25) -- (3.55,1.25);
+\draw[->] (early.east) -- node[above,align=center,fill=white,inner sep=2pt] {urgent\\deadline} (late.west);
+\node[font=\footnotesize,align=center] at (0,1.25) {Same choice for every $\theta\in B$};
+\node[font=\footnotesize,align=center] at (7.1,1.25) {Respond to each revealed target};
+\draw[decorate,decoration={brace,mirror,amplitude=5pt}] (-1.8,-1.05) -- (8.9,-1.05);
+\node at (3.55,-1.65) {One shared budget: $|E|+|D|\le k$};
+\end{tikzpicture}
